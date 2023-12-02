@@ -1,4 +1,4 @@
-package ita3.bil_abonnement;
+package ita3.car_subscription;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

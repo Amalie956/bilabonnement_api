@@ -1,13 +1,13 @@
-package ita3.bil_abonnement;
+package ita3.car_subscription;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class BilAbonnementApplication {
+public class carSubscriptionApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(BilAbonnementApplication.class, args);
+        SpringApplication.run(carSubscriptionApplication.class, args);
     }
 
 }
