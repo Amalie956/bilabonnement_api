@@ -41,7 +41,7 @@ public class CarController {
         Optional<Car> existingCar = carRepository.findById(id);
         if (existingCar.isPresent()) {
             Car updatedCar = existingCar.get();
-            updatedCar.setName(carDetails.getName());
+            updatedCar.setBrand(carDetails.getBrand());
             updatedCar.setGearType(carDetails.getGearType());
             updatedCar.setFuelType(carDetails.getFuelType());
             updatedCar.setPerLiter(carDetails.getPerLiter());

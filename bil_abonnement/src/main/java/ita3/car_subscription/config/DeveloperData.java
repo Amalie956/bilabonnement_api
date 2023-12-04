@@ -46,8 +46,8 @@ public class DeveloperData implements ApplicationRunner {
         carRepository.save(car1);
         carRepository.save(car2);
 
-        Customer customer1 = new Customer("Lars", "Andersen",290107851, 818231717);
-        Customer customer2 = new Customer("Hanne", "Munk",240780771, 981737113);
+        Customer customer1 = new Customer("Lars", "Andersen","290107851", 818231717);
+        Customer customer2 = new Customer("Hanne", "Munk","240780771", 981737113);
 
         customerRepository.save(customer1);
         customerRepository.save(customer2);
