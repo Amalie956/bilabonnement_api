@@ -2,6 +2,7 @@ package ita3.car_subscription.entity;
 
 import jakarta.persistence.*;
 
+import java.util.Date;
 import java.util.List;
 
 @Entity
@@ -9,8 +10,8 @@ public class Subscription {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    private int startDate;
-    private int endDate;
+    private Date startDate;
+    private Date endDate;
     private double plannedDistanceInKilometers;
     @ManyToOne
     @JoinColumn(name = "customer_id", referencedColumnName = "id") //fremmednøgle
@@ -23,9 +24,10 @@ public class Subscription {
 
     @OneToMany(mappedBy = "subscription")
     private List<Damage> damages;
+  
     public Subscription() {
-
     }
+
     public Subscription(int startDate, int endDate, double plannedDistanceInKilometers, Customer customer, Car car) {
         this.startDate = startDate;
         this.endDate = endDate;
@@ -43,19 +45,19 @@ public class Subscription {
         this.id = id;
     }
 
-    public int getStartDate() {
+    public Date getStartDate() {
         return startDate;
     }
 
-    public void setStartDate(int startDate) {
+    public void setStartDate(Date startDate) {
         this.startDate = startDate;
     }
 
-    public int getEndDate() {
+    public Date getEndDate() {
         return endDate;
     }
 
-    public void setEndDate(int endDate) {
+    public void setEndDate(Date endDate) {
         this.endDate = endDate;
     }
 

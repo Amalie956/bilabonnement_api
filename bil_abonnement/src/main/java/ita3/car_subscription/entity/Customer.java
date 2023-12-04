@@ -11,14 +11,15 @@ public class Customer {
     private long id;
     private String firstName;
     private String lastName;
-    private int cpr;
+    private String cpr;
     private int accountNumber;
     @OneToMany(mappedBy = "customer")
     private List<Subscription> subscriptions;
+  
     public Customer() {
-
     }
-    public Customer(String firstName, String lastName, int cpr, int accountNumber) {
+
+    public Customer(String firstName, String lastName, String cpr, int accountNumber) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.cpr = cpr;
@@ -50,11 +51,11 @@ public class Customer {
         this.lastName = lastName;
     }
 
-    public int getCpr() {
+    public String getCpr() {
         return cpr;
     }
 
-    public void setCpr(int cpr) {
+    public void setCpr(String cpr) {
         this.cpr = cpr;
     }
 
