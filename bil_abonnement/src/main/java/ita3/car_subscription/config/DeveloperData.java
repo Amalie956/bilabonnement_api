@@ -12,6 +12,7 @@ import org.springframework.boot.ApplicationRunner;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.List;
 
@@ -52,11 +53,11 @@ public class DeveloperData implements ApplicationRunner {
         customerRepository.save(customer1);
         customerRepository.save(customer2);
 
-        Subscription subscription1 = new Subscription(11,11,36.000,customer1,car1);
-        Subscription subscription2 = new Subscription(12,12,18.000,customer2,car2);
-
+        Subscription subscription1 = new Subscription(LocalDate.of(2022, 12, 25), LocalDate.of(2023, 3, 25),36.000,customer1,car1);
+        Subscription subscription2 = new Subscription(LocalDate.of(2023, 4, 1), LocalDate.of(2023, 11, 6),18.000,customer2,car2);
         subscriptionRepository.save(subscription1);
         subscriptionRepository.save(subscription2);
+
 
         //new Car("VW Golf VI", "Manuel","Benzin", 18.21,true,98172,150000),
         //Car car2 = new Car("Seat Ibiza", "Automatgear","Benzin", 21.87,false,01210161,135000),

@@ -1,7 +1,9 @@
 package ita3.car_subscription.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 
@@ -10,8 +12,10 @@ public class Subscription {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    private Date startDate;
-    private Date endDate;
+    @JsonFormat(pattern = "yyyy-MM-dd")
+    private LocalDate startDate;
+    @JsonFormat(pattern = "yyyy-MM-dd")
+    private LocalDate endDate;
     private double plannedDistanceInKilometers;
     @ManyToOne
     @JoinColumn(name = "customer_id", referencedColumnName = "id") //fremmednøgle
@@ -28,7 +32,7 @@ public class Subscription {
     public Subscription() {
     }
 
-    public Subscription(Date startDate, Date endDate, double plannedDistanceInKilometers, Customer customer, Car car) {
+    public Subscription(LocalDate startDate, LocalDate endDate, double plannedDistanceInKilometers, Customer customer, Car car) {
         this.startDate = startDate;
         this.endDate = endDate;
         this.plannedDistanceInKilometers = plannedDistanceInKilometers;
@@ -45,19 +49,19 @@ public class Subscription {
         this.id = id;
     }
 
-    public Date getStartDate() {
+    public LocalDate getStartDate() {
         return startDate;
     }
 
-    public void setStartDate(Date startDate) {
+    public void setStartDate(LocalDate startDate) {
         this.startDate = startDate;
     }
 
-    public Date getEndDate() {
+    public LocalDate getEndDate() {
         return endDate;
     }
 
-    public void setEndDate(Date endDate) {
+    public void setEndDate(LocalDate endDate) {
         this.endDate = endDate;
     }
 
