@@ -53,8 +53,8 @@ public class DeveloperData implements ApplicationRunner {
         customerRepository.save(customer1);
         customerRepository.save(customer2);
 
-        Subscription subscription1 = new Subscription(LocalDate.of(2022, 12, 25), LocalDate.of( 2023, 3, 25), 3, 25),36.000,customer1,car1);
-        Subscription subscription2 = new Subscription(LocalDate.of(2023, 4, 1), LocalDate.of(2023, 11, 06),18.000,customer2,car2);
+        Subscription subscription1 = new Subscription(LocalDate.of(2022, 12, 25), LocalDate.of(2023, 3, 25),36.000,customer1,car1);
+        Subscription subscription2 = new Subscription(LocalDate.of(2023, 4, 1), LocalDate.of(2023, 11, 6),18.000,customer2,car2);
         subscriptionRepository.save(subscription1);
         subscriptionRepository.save(subscription2);
 
