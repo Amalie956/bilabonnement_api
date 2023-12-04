@@ -26,8 +26,7 @@ public class Subscription {
     public Subscription() {
 
     }
-    public Subscription(long id, int startDate, int endDate, double plannedDistanceInKilometers, Customer customer, Car car) {
-        this.id = id;
+    public Subscription(int startDate, int endDate, double plannedDistanceInKilometers, Customer customer, Car car) {
         this.startDate = startDate;
         this.endDate = endDate;
         this.plannedDistanceInKilometers = plannedDistanceInKilometers;

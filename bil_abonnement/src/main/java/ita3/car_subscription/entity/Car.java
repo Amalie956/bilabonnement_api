@@ -23,8 +23,8 @@ public class Car {
     public Car() {
 
     }
-    public Car(long id, String name, String gearType, String fuelType, double perLiter, boolean carAvailable, int registrationNumber, int price) {
-        this.id = id;
+    public Car(/*long id,*/String name, String gearType, String fuelType, double perLiter, boolean carAvailable, int registrationNumber, int price) {
+        //this.id = id;
         this.name = name;
         this.gearType = gearType;
         this.fuelType = fuelType;
