@@ -18,8 +18,7 @@ public class Damage {
     public Damage() {
 
     }
-    public Damage(long id, String error, String errorType, int numbersOfErrors, int pricePerError) {
-        this.id = id;
+    public Damage(String error, String errorType, int numbersOfErrors, int pricePerError) {
         this.error = error;
         this.errorType = errorType;
         this.numbersOfErrors = numbersOfErrors;
