@@ -10,7 +10,7 @@ public class Damage {
     private String error;
     private String errorType;
     private int numbersOfErrors;
-    private int pricePerError;
+    private double pricePerError;
 
     @ManyToOne
     @JoinColumn(name = "subscription_id", referencedColumnName = "id") //fremmednøgle
@@ -18,7 +18,7 @@ public class Damage {
     public Damage() {
 
     }
-    public Damage(long id, String error, String errorType, int numbersOfErrors, int pricePerError) {
+    public Damage(long id, String error, String errorType, int numbersOfErrors, double pricePerError) {
         this.id = id;
         this.error = error;
         this.errorType = errorType;
@@ -59,11 +59,11 @@ public class Damage {
         this.numbersOfErrors = numbersOfErrors;
     }
 
-    public int getPricePerError() {
+    public double getPricePerError() {
         return pricePerError;
     }
 
-    public void setPricePerError(int pricePerError) {
+    public void setPricePerError(double pricePerError) {
         this.pricePerError = pricePerError;
     }
 }

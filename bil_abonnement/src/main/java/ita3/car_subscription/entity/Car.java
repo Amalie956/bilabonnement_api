@@ -10,22 +10,22 @@ public class Car {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    private String name;
+    private String brand;
     private String gearType;
     private String fuelType;
     private double perLiter;
     private boolean carAvailable;
     private int registrationNumber;
-    private int price;
+    private double price;
     @OneToMany(mappedBy = "car")
     private List<Subscription> subscriptions;
 
     public Car() {
 
     }
-    public Car(long id, String name, String gearType, String fuelType, double perLiter, boolean carAvailable, int registrationNumber, int price) {
+    public Car(long id, String brand, String gearType, String fuelType, double perLiter, boolean carAvailable, int registrationNumber, double price) {
         this.id = id;
-        this.name = name;
+        this.brand = brand;
         this.gearType = gearType;
         this.fuelType = fuelType;
         this.perLiter = perLiter;
@@ -43,12 +43,12 @@ public class Car {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getBrand() {
+        return brand;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setBrand(String brand) {
+        this.brand = brand;
     }
 
     public String getGearType() {
@@ -91,11 +91,11 @@ public class Car {
         this.registrationNumber = registrationNumber;
     }
 
-    public int getPrice() {
+    public double getPrice() {
         return price;
     }
 
-    public void setPrice(int price) {
+    public void setPrice(double price) {
         this.price = price;
     }
 }
