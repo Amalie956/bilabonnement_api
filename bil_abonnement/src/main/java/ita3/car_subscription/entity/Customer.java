@@ -15,11 +15,11 @@ public class Customer {
     private int accountNumber;
     @OneToMany(mappedBy = "customer")
     private List<Subscription> subscriptions;
+  
     public Customer() {
-
     }
-    public Customer(long id, String firstName, String lastName, String cpr, int accountNumber) {
-        this.id = id;
+
+    public Customer(String firstName, String lastName, String cpr, int accountNumber) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.cpr = cpr;
