@@ -1,8 +1,6 @@
 package ita3.car_subscription.api;
 
-import ita3.car_subscription.entity.Car;
 import ita3.car_subscription.entity.DamageReport;
-import ita3.car_subscription.entity.Subscription;
 import ita3.car_subscription.repository.IDamageReportRepository;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -11,10 +9,10 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-public class DamageController {
+public class DamageReportController {
     private IDamageReportRepository damageReportRepository;
 
-    public DamageController(IDamageReportRepository damageReportRepository) {
+    public DamageReportController(IDamageReportRepository damageReportRepository) {
         this.damageReportRepository = damageReportRepository;
     }
 
