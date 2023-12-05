@@ -14,14 +14,16 @@ public class CarController {
 
     public CarController(ICarRepository carRepository) {
         this.carRepository = carRepository;
-
     }
+
+    //Read All
     @GetMapping("/api/cars")
     public List<Car> getAllCars() {
         return carRepository.findAll();
     }
 
-    @GetMapping("/api/car/{id}")
+    //Read one by id
+    @GetMapping("/api/cars/{id}")
     public ResponseEntity<Car> getCarById(@PathVariable Long id) {
         Optional<Car> car = carRepository.findById(id);
         if (car.isPresent()) {
@@ -31,12 +33,14 @@ public class CarController {
         }
     }
 
-    @PostMapping("/api/car")
+    //Create a car
+    @PostMapping("/api/cars")
     public Car createCar(@RequestBody Car car) {
         return carRepository.save(car);
     }
 
-    @PutMapping("/api/car/{id}")
+    //Update a car
+    @PutMapping("/api/cars/{id}")
     public ResponseEntity<Car> updatedSubscription(@PathVariable Long id, @RequestBody Car carDetails) {
         Optional<Car> existingCar = carRepository.findById(id);
         if (existingCar.isPresent()) {
@@ -55,7 +59,8 @@ public class CarController {
         }
     }
 
-    @DeleteMapping("/api/car/{id}")
+    //Delete a car
+    @DeleteMapping("/api/cars/{id}")
     public ResponseEntity<?> deleteCar(@PathVariable Long id) {
         if (carRepository.existsById(id)) {
             carRepository.deleteById(id);

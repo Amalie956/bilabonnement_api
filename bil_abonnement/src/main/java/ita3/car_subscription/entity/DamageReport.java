@@ -3,7 +3,7 @@ package ita3.car_subscription.entity;
 import jakarta.persistence.*;
 
 @Entity
-public class Damage {
+public class DamageReport {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
@@ -15,11 +15,10 @@ public class Damage {
     @ManyToOne
     @JoinColumn(name = "subscription_id", referencedColumnName = "id") //fremmednøgle
     private Subscription subscription;
-    public Damage() {
-
+    public DamageReport() {
     }
 
-    public Damage(String error, String errorType, int numbersOfErrors, int pricePerError) {
+    public DamageReport(String error, String errorType, int numbersOfErrors, int pricePerError) {
         this.error = error;
         this.errorType = errorType;
         this.numbersOfErrors = numbersOfErrors;

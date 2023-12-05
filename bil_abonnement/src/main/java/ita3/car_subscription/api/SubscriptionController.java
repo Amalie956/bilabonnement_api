@@ -20,18 +20,20 @@ public class SubscriptionController {
     @GetMapping("/api")
     public String apiInfo(){
         return "Subscription API Endpoints:" +
-                "\n- GET /api/subscriptions: List all subscriptions" +
-                "\n- GET /api/subscription/{id}: Get a subscription by its ID" +
-                "\n- POST /api/subscription: Create a new movie" +
-                "\n- PUT /api/subscription/{id}: Update an existing movie" +
-                "\n- DELETE /api/subscription/{id}: Delete a movie";
+                "\n- GET /api/subscriptions: Liste af alle lejeaftaler" +
+                "\n- GET /api/subscriptions/{id}: Se en lejeaftale ud fra dens ID" +
+                "\n- POST /api/subscriptions: Lav en ny lejeaftale" +
+                "\n- PUT /api/subscriptions/{id}: Opdater en eksisterende lejeaftale" +
+                "\n- DELETE /api/subscriptions/{id}: Slet en lejeaftale";
     }
 
+    //Read all
     @GetMapping("/api/subscriptions")
     public List<Subscription> getAllSubscriptions() {
         return subscriptionRepository.findAll();
     }
 
+    //Read one by id
     @GetMapping("/api/subscription/{id}")
     public ResponseEntity<Subscription> getSubscriptionById(@PathVariable Long id) {
         Optional<Subscription> subscription = subscriptionRepository.findById(id);
@@ -42,12 +44,14 @@ public class SubscriptionController {
         }
     }
 
-    @PostMapping("/api/subscription")
+    //Create a subscription
+    @PostMapping("/api/subscriptions")
     public Subscription createSubscription(@RequestBody Subscription subscription) {
         return subscriptionRepository.save(subscription);
     }
 
-    @PutMapping("/api/subscription/{id}")
+    //Update a subscription
+    @PutMapping("/api/subscriptions/{id}")
     public ResponseEntity<Subscription> updatedSubscription(@PathVariable Long id, @RequestBody Subscription subscriptionDetails) {
         Optional<Subscription> existingSubscription = subscriptionRepository.findById(id);
         if (existingSubscription.isPresent()) {
@@ -65,7 +69,8 @@ public class SubscriptionController {
         }
     }
 
-    @DeleteMapping("/api/subscription/{id}")
+    //Delete a subscription
+    @DeleteMapping("/api/subscriptions/{id}")
     public ResponseEntity<?> deleteSubscription(@PathVariable Long id) {
         if (subscriptionRepository.existsById(id)) {
             subscriptionRepository.deleteById(id);

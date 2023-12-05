@@ -4,7 +4,6 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
-import java.util.Date;
 import java.util.List;
 
 @Entity
@@ -27,7 +26,7 @@ public class Subscription {
     private Car car;
 
     @OneToMany(mappedBy = "subscription")
-    private List<Damage> damages;
+    private List<DamageReport> damageReports;
   
     public Subscription() {
     }
