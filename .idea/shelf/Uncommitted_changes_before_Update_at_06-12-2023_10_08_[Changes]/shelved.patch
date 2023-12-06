@@ -1,0 +1,16 @@
+Index: bil_abonnement/src/main/java/ita3/car_subscription/services/TestService.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/bil_abonnement/src/main/java/ita3/car_subscription/services/TestService.java b/bil_abonnement/src/main/java/ita3/car_subscription/services/SubscriptionService.java
+rename from bil_abonnement/src/main/java/ita3/car_subscription/services/TestService.java
+rename to bil_abonnement/src/main/java/ita3/car_subscription/services/SubscriptionService.java
+--- a/bil_abonnement/src/main/java/ita3/car_subscription/services/TestService.java	(revision 4a4b6f08b672c702551f89fadfd7d637959bcdb2)
++++ b/bil_abonnement/src/main/java/ita3/car_subscription/services/SubscriptionService.java	(date 1701789940469)
+@@ -1,4 +1,4 @@
+ package ita3.car_subscription.services;
+ 
+-public class TestService {
++public class SubscriptionService {
+ }

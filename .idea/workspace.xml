@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a7c62c6e-6b08-4a1e-b8d0-f2d728c84a78" name="Changes" comment="Ændret navn i @GetMapping(&quot;/api/damagereports/info&quot;) i DamageReportController">
+      <change beforePath="$PROJECT_DIR$/bil_abonnement/src/main/java/ita3/car_subscription/api/SubscriptionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/bil_abonnement/src/main/java/ita3/car_subscription/api/SubscriptionController.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="52-forbinde-front-og-backend-ift-oprette-et-abonnement" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/bil_abonnement/src/main/java/ita3/bil_abonnement/entity/Car.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2YubB20AMulsASXprxnZZ77DeSb" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Amali/Documents/IT-Arkitektur/3. Semester/Tværfaglig eksamen/bil_abonnement&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RunManager">
+    <configuration name="carSubscriptionApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <envs>
+        <env name="JDBC_DATABASE_URL" value="jdbc:mysql://carsubscriptiondatabase.mysql.database.azure.com/car_subscription_database" />
+        <env name="JDBC_PASSWORD" value="Klaraandersen1" />
+        <env name="JDBC_USERNAME" value="Amalie" />
+      </envs>
+      <module name="bil_abonnement" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ita3.car_subscription.carSubscriptionApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a7c62c6e-6b08-4a1e-b8d0-f2d728c84a78" name="Changes" comment="" />
+      <created>1701378272849</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1701378272849</updated>
+      <workItem from="1701378274204" duration="2480000" />
+      <workItem from="1701417444324" duration="3140000" />
+      <workItem from="1701546410158" duration="8159000" />
+      <workItem from="1701691627924" duration="10052000" />
+      <workItem from="1701767679287" duration="5670000" />
+      <workItem from="1701787975187" duration="5110000" />
+      <workItem from="1701848226100" duration="9098000" />
+    </task>
+    <task id="LOCAL-00001" summary="Push Spring Boot project på Github">
+      <option name="closed" value="true" />
+      <created>1701378480633</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1701378480633</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Tilføjet mapper og test filer">
+      <option name="closed" value="true" />
+      <created>1701379841385</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1701379841385</updated>
+    </task>
+    <task id="LOCAL-00003" summary="#37 Tilføjet entiteter og relationer imellem dem">
+      <option name="closed" value="true" />
+      <created>1701554731579</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1701554731579</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Ændret navn i @GetMapping(&quot;/api/damagereports/info&quot;) i DamageReportController">
+      <option name="closed" value="true" />
+      <created>1701854335375</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1701854335375</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Push Spring Boot project på Github" />
+    <MESSAGE value="Tilføjet mapper og test filer" />
+    <MESSAGE value="#37 Tilføjet entiteter og relationer imellem dem" />
+    <MESSAGE value="Ændret navn i @GetMapping(&quot;/api/damagereports/info&quot;) i DamageReportController" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ændret navn i @GetMapping(&quot;/api/damagereports/info&quot;) i DamageReportController" />
+  </component>
+</project>
