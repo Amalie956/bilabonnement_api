@@ -1,8 +1,6 @@
 package ita3.car_subscription.api;
 
-import ita3.car_subscription.entity.Car;
 import ita3.car_subscription.entity.DamageReport;
-import ita3.car_subscription.entity.Subscription;
 import ita3.car_subscription.repository.IDamageReportRepository;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -11,14 +9,14 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-public class DamageController {
+public class DamageReportController {
     private IDamageReportRepository damageReportRepository;
 
-    public DamageController(IDamageReportRepository damageReportRepository) {
+    public DamageReportController(IDamageReportRepository damageReportRepository) {
         this.damageReportRepository = damageReportRepository;
     }
 
-    @GetMapping("/api")
+    /*@GetMapping("/api")
     public String apiInfo(){
         return "Subscription API Endpoints:" +
                 "\n- GET /api/subscriptions: Liste af alle skaderapporter" +
@@ -26,7 +24,7 @@ public class DamageController {
                 "\n- POST /api/subscriptions: Lav en ny skaderapport" +
                 "\n- PUT /api/subscriptions/{id}: Opdater en eksisterende skaderapport" +
                 "\n- DELETE /api/subscriptions/{id}: Slet en skaderapport";
-    }
+    }*/
 
 
     //Read All
