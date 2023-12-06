@@ -16,7 +16,7 @@ public class DamageReportController {
         this.damageReportRepository = damageReportRepository;
     }
 
-    @GetMapping("/api")
+    /*@GetMapping("/api")
     public String apiInfo(){
         return "Subscription API Endpoints:" +
                 "\n- GET /api/subscriptions: Liste af alle skaderapporter" +
@@ -24,7 +24,7 @@ public class DamageReportController {
                 "\n- POST /api/subscriptions: Lav en ny skaderapport" +
                 "\n- PUT /api/subscriptions/{id}: Opdater en eksisterende skaderapport" +
                 "\n- DELETE /api/subscriptions/{id}: Slet en skaderapport";
-    }
+    }*/
 
 
     //Read All
