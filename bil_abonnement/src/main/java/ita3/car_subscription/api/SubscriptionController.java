@@ -1,6 +1,8 @@
 package ita3.car_subscription.api;
 
 import ita3.car_subscription.entity.Subscription;
+import ita3.car_subscription.repository.ICarRepository;
+import ita3.car_subscription.repository.ICustomerRepository;
 import ita3.car_subscription.repository.ISubscriptionRepository;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -13,9 +15,15 @@ import java.util.Optional;
 public class SubscriptionController {
 
     private ISubscriptionRepository subscriptionRepository;
+    private ICustomerRepository customerRepository;
 
-    public SubscriptionController(ISubscriptionRepository subscriptionRepository){
+    private ICarRepository carRepository;
+
+    public SubscriptionController(ISubscriptionRepository subscriptionRepository, ICustomerRepository customerRepository, ICarRepository carRepository){
         this.subscriptionRepository = subscriptionRepository;
+        this.customerRepository = customerRepository;
+        this.carRepository = carRepository;
+
     }
 
     @GetMapping("/api")
@@ -48,6 +56,8 @@ public class SubscriptionController {
     //Create a subscription
     @PostMapping("/api/subscriptions")
     public Subscription createSubscription(@RequestBody Subscription subscription) {
+        customerRepository.save(subscription.getCustomer());
+        carRepository.save(subscription.getCar());
         return subscriptionRepository.save(subscription);
     }
 

@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a7c62c6e-6b08-4a1e-b8d0-f2d728c84a78" name="Changes" comment="Tilføjet @CrossOrigin(&quot;*&quot;)" />
+    <list default="true" id="a7c62c6e-6b08-4a1e-b8d0-f2d728c84a78" name="Changes" comment="Ændret navn i @GetMapping(&quot;/api/damagereports/info&quot;) i DamageReportController">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06-12-2023_10_08__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06-12-2023_10_08__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bil_abonnement/src/main/java/ita3/car_subscription/api/SubscriptionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/bil_abonnement/src/main/java/ita3/car_subscription/api/SubscriptionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bil_abonnement/src/main/java/ita3/car_subscription/entity/Subscription.java" beforeDir="false" afterPath="$PROJECT_DIR$/bil_abonnement/src/main/java/ita3/car_subscription/entity/Subscription.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,6 +41,7 @@
   &quot;associatedIndex&quot;: 1
 }</component>
   <component name="ProjectId" id="2YubB20AMulsASXprxnZZ77DeSb" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -53,6 +60,7 @@
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;be386ad2ddd721237024404df607963d&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -84,7 +92,9 @@
       <workItem from="1701691627924" duration="10052000" />
       <workItem from="1701767679287" duration="5670000" />
       <workItem from="1701787975187" duration="5110000" />
-      <workItem from="1701848226100" duration="9448000" />
+      <workItem from="1701848226100" duration="9098000" />
+      <workItem from="1701860057885" duration="182000" />
+      <workItem from="1701937740631" duration="2976000" />
     </task>
     <task id="LOCAL-00001" summary="Push Spring Boot project på Github">
       <option name="closed" value="true" />
@@ -118,23 +128,7 @@
       <option name="project" value="LOCAL" />
       <updated>1701854335375</updated>
     </task>
-    <task id="LOCAL-00005" summary="Tilføjet @CrossOrigin(&quot;*&quot;)">
-      <option name="closed" value="true" />
-      <created>1701859416223</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1701859416223</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Tilføjet @CrossOrigin(&quot;*&quot;)">
-      <option name="closed" value="true" />
-      <created>1701859424913</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1701859424913</updated>
-    </task>
-    <option name="localTasksCounter" value="7" />
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -156,7 +150,6 @@
     <MESSAGE value="Tilføjet mapper og test filer" />
     <MESSAGE value="#37 Tilføjet entiteter og relationer imellem dem" />
     <MESSAGE value="Ændret navn i @GetMapping(&quot;/api/damagereports/info&quot;) i DamageReportController" />
-    <MESSAGE value="Tilføjet @CrossOrigin(&quot;*&quot;)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tilføjet @CrossOrigin(&quot;*&quot;)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ændret navn i @GetMapping(&quot;/api/damagereports/info&quot;) i DamageReportController" />
   </component>
 </project>
