@@ -16,13 +16,13 @@ public class Subscription {
     @JsonFormat(pattern = "yyyy-MM-dd")
     private LocalDate endDate;
     private double plannedDistanceInKilometers;
-    @ManyToOne
-    @JoinColumn(name = "customer_id", referencedColumnName = "id") //fremmednøgle
+    @ManyToOne//(cascade = CascadeType.ALL)
+    @JoinColumn(name = "customer_id", referencedColumnName = "id", nullable = false) //fremmednøgle
     private Customer customer;
 
 
-    @ManyToOne
-    @JoinColumn(name = "car_id", referencedColumnName = "id") //fremmednøgle
+    @ManyToOne//(cascade = CascadeType.ALL)
+    @JoinColumn(name = "car_id", referencedColumnName = "id", nullable = false) //fremmednøgle
     private Car car;
 
     @OneToMany(mappedBy = "subscription")
