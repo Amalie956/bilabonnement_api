@@ -56,8 +56,8 @@ public class SubscriptionController {
     //Create a subscription
     @PostMapping("/api/subscriptions")
     public Subscription createSubscription(@RequestBody Subscription subscription) {
-        customerRepository.save(subscription.getCustomer());
-        carRepository.save(subscription.getCar());
+       //customerRepository.save(subscription.getCustomer());
+        //carRepository.save(subscription.getCar());
         return subscriptionRepository.save(subscription);
     }
 

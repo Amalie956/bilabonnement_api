@@ -17,12 +17,12 @@ public class Subscription {
     private LocalDate endDate;
     private double plannedDistanceInKilometers;
     @ManyToOne//(cascade = CascadeType.ALL)
-    @JoinColumn(name = "customer_id", referencedColumnName = "id", nullable = false) //fremmednøgle
+    @JoinColumn(name = "customer_id", referencedColumnName = "id") //fremmednøgle
     private Customer customer;
 
 
     @ManyToOne//(cascade = CascadeType.ALL)
-    @JoinColumn(name = "car_id", referencedColumnName = "id", nullable = false) //fremmednøgle
+    @JoinColumn(name = "car_id", referencedColumnName = "id") //fremmednøgle
     private Car car;
 
     @OneToMany(mappedBy = "subscription")
