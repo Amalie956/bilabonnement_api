@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a7c62c6e-6b08-4a1e-b8d0-f2d728c84a78" name="Changes" comment="Fikset POST/CREATE">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bil_abonnement/src/main/java/ita3/car_subscription/api/SubscriptionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/bil_abonnement/src/main/java/ita3/car_subscription/api/SubscriptionController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bil_abonnement/src/main/java/ita3/car_subscription/config/DeveloperData.java" beforeDir="false" afterPath="$PROJECT_DIR$/bil_abonnement/src/main/java/ita3/car_subscription/config/DeveloperData.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -24,7 +23,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="52-forbinde-front-og-backend-ift-oprette-et-abonnement" />
+        <entry key="$PROJECT_DIR$" value="56-få-lavet-en-skaderapport" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -97,6 +96,7 @@
       <workItem from="1701944048157" duration="1722000" />
       <workItem from="1701969253014" duration="1098000" />
       <workItem from="1702058314710" duration="551000" />
+      <workItem from="1702226750020" duration="947000" />
     </task>
     <task id="LOCAL-00001" summary="Push Spring Boot project på Github">
       <option name="closed" value="true" />
