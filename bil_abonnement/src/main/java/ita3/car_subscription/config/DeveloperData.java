@@ -2,6 +2,7 @@ package ita3.car_subscription.config;
 
 import ita3.car_subscription.entity.Car;
 import ita3.car_subscription.entity.Customer;
+import ita3.car_subscription.entity.DamageReport;
 import ita3.car_subscription.entity.Subscription;
 import ita3.car_subscription.repository.ICarRepository;
 import ita3.car_subscription.repository.ICustomerRepository;
@@ -48,6 +49,9 @@ public class DeveloperData implements ApplicationRunner {
         Subscription subscription2 = new Subscription(LocalDate.of(2023, 4, 1), LocalDate.of(2023, 11, 6),18.000,customer2,car2);
         subscriptionRepository.save(subscription1);
         subscriptionRepository.save(subscription2);
+
+        DamageReport damageReport1 = new DamageReport("Dæk fladt", "Dæk", 1, 500);
+        damageReportRepository.save(damageReport1);
     }
 
 }
