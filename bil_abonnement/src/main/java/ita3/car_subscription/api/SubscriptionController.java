@@ -1,7 +1,7 @@
 package ita3.car_subscription.api;
 
 import ita3.car_subscription.entity.Subscription;
-import ita3.car_subscription.repository.ICarRepository;
+import ita3.car_subscription.repository.ICarCustomer;
 import ita3.car_subscription.repository.ICustomerRepository;
 import ita3.car_subscription.repository.ISubscriptionRepository;
 import org.springframework.http.ResponseEntity;
@@ -16,9 +16,9 @@ public class SubscriptionController {
 
     private ISubscriptionRepository subscriptionRepository;
     private ICustomerRepository customerRepository;
-    private ICarRepository carRepository;
+    private ICarCustomer carRepository;
 
-    public SubscriptionController(ISubscriptionRepository subscriptionRepository, ICustomerRepository customerRepository, ICarRepository carRepository){
+    public SubscriptionController(ISubscriptionRepository subscriptionRepository, ICustomerRepository customerRepository, ICarCustomer carRepository){
         this.subscriptionRepository = subscriptionRepository;
         this.customerRepository = customerRepository;
         this.carRepository = carRepository;
@@ -55,8 +55,12 @@ public class SubscriptionController {
     //Create a subscription
     @PostMapping("/api/subscriptions")
     public Subscription createSubscription(@RequestBody Subscription subscription) {
-       //customerRepository.save(subscription.getCustomer());
-        //carRepository.save(subscription.getCar());
+        //Her bliver bil og kunde hentet med deres id, som forbinder det til subscribtion
+        var car = carRepository.findById(subscription.carID).get();
+        var customer = customerRepository.findById(subscription.customerID).get();
+        //Her tilknyttes den den fundne bil og kunden til abonnementet ved at bruge "set"
+        subscription.setCar(car);
+        subscription.setCustomer(customer);
         return subscriptionRepository.save(subscription);
     }
 

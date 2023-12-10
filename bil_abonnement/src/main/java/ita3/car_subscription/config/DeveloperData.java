@@ -4,7 +4,7 @@ import ita3.car_subscription.entity.Car;
 import ita3.car_subscription.entity.Customer;
 import ita3.car_subscription.entity.DamageReport;
 import ita3.car_subscription.entity.Subscription;
-import ita3.car_subscription.repository.ICarRepository;
+import ita3.car_subscription.repository.ICarCustomer;
 import ita3.car_subscription.repository.ICustomerRepository;
 import ita3.car_subscription.repository.IDamageReportRepository;
 import ita3.car_subscription.repository.ISubscriptionRepository;
@@ -17,15 +17,11 @@ import java.time.LocalDate;
 @Configuration
 public class DeveloperData implements ApplicationRunner {
     private ISubscriptionRepository subscriptionRepository;
-    private ICarRepository carRepository;
+    private ICarCustomer carRepository;
     private ICustomerRepository customerRepository;
     private IDamageReportRepository damageReportRepository;
 
-    //private static final List<Subscription> SUBSCRIPTIONS = Arrays.asList(
-            //new Subscription());
-
-
-    public DeveloperData(ISubscriptionRepository subscriptionRepository, ICarRepository carRepository, ICustomerRepository customerRepository, IDamageReportRepository damageReportRepository) {
+    public DeveloperData(ISubscriptionRepository subscriptionRepository, ICarCustomer carRepository, ICustomerRepository customerRepository, IDamageReportRepository damageReportRepository) {
         this.subscriptionRepository = subscriptionRepository;
         this.carRepository = carRepository;
         this.customerRepository = customerRepository;
@@ -37,8 +33,10 @@ public class DeveloperData implements ApplicationRunner {
     public void run(ApplicationArguments args) throws Exception {
         Car car1 = new Car("VW Golf VI", "Manuel","Benzin", 18.21,true,98172,150000);
         Car car2 = new Car("Seat Ibiza", "Automatgear","Benzin", 21.87,false,01210161,135000);
+        Car car3 = new Car("Kia", "Automatgear","Benzin", 21.87,false,01210161,135000);
         carRepository.save(car1);
         carRepository.save(car2);
+        carRepository.save(car3);
 
         Customer customer1 = new Customer("Lars", "Andersen","290107851", 818231717);
         Customer customer2 = new Customer("Hanne", "Munk","240780771", 981737113);

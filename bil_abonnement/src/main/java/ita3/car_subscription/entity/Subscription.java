@@ -16,6 +16,10 @@ public class Subscription {
     @JsonFormat(pattern = "yyyy-MM-dd")
     private LocalDate endDate;
     private double plannedDistanceInKilometers;
+    @Transient
+    public long carID;
+    @Transient
+    public long customerID;
     @ManyToOne//(cascade = CascadeType.ALL)
     @JoinColumn(name = "customer_id", referencedColumnName = "id") //fremmednøgle
     private Customer customer;

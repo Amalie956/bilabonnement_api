@@ -1,7 +1,7 @@
 package ita3.car_subscription.api;
 
 import ita3.car_subscription.entity.Car;
-import ita3.car_subscription.repository.ICarRepository;
+import ita3.car_subscription.repository.ICarCustomer;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,9 +11,9 @@ import java.util.Optional;
 @RestController
 @CrossOrigin("*")
 public class CarController {
-    private ICarRepository carRepository;
+    private ICarCustomer carRepository;
 
-    public CarController(ICarRepository carRepository) {
+    public CarController(ICarCustomer carRepository) {
         this.carRepository = carRepository;
     }
 
