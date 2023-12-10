@@ -4,9 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a7c62c6e-6b08-4a1e-b8d0-f2d728c84a78" name="Changes" comment="Fikset POST/CREATE">
+    <list default="true" id="a7c62c6e-6b08-4a1e-b8d0-f2d728c84a78" name="Changes" comment="Ændret navn i @GetMapping(&quot;/api/damagereports/info&quot;) i DamageReportController">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+/*
       <change beforePath="$PROJECT_DIR$/bil_abonnement/src/main/java/ita3/car_subscription/config/DeveloperData.java" beforeDir="false" afterPath="$PROJECT_DIR$/bil_abonnement/src/main/java/ita3/car_subscription/config/DeveloperData.java" afterDir="false" />
+*/
+      <change beforePath="$PROJECT_DIR$/bil_abonnement/src/main/java/ita3/car_subscription/api/SubscriptionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/bil_abonnement/src/main/java/ita3/car_subscription/api/SubscriptionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bil_abonnement/src/main/java/ita3/car_subscription/entity/Subscription.java" beforeDir="false" afterPath="$PROJECT_DIR$/bil_abonnement/src/main/java/ita3/car_subscription/entity/Subscription.java" afterDir="false" />
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,25 +48,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Amali/Documents/IT-Arkitektur/3. Semester/Tværfaglig eksamen/bil_abonnement&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;be386ad2ddd721237024404df607963d&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Amali/Documents/IT-Arkitektur/3. Semester/Tværfaglig eksamen/bil_abonnement",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "spring.configuration.checksum": "be386ad2ddd721237024404df607963d",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="carSubscriptionApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <envs>
@@ -92,11 +97,20 @@
       <workItem from="1701787975187" duration="5110000" />
       <workItem from="1701848226100" duration="9098000" />
       <workItem from="1701860057885" duration="182000" />
+/*
+      <<<<<<< 60-tilføj-biler-i-developer-data
       <workItem from="1701937740631" duration="4204000" />
       <workItem from="1701944048157" duration="1722000" />
       <workItem from="1701969253014" duration="1098000" />
       <workItem from="1702058314710" duration="551000" />
       <workItem from="1702226750020" duration="947000" />
+      */
+      <workItem from="1701937740631" duration="2976000" />
+      <workItem from="1701981621340" duration="4955000" />
+      <workItem from="1702035706922" duration="679000" />
+      <workItem from="1702070621992" duration="1320000" />
+      <workItem from="1702124289897" duration="4000000" />
+    
     </task>
     <task id="LOCAL-00001" summary="Push Spring Boot project på Github">
       <option name="closed" value="true" />
@@ -130,15 +144,7 @@
       <option name="project" value="LOCAL" />
       <updated>1701854335375</updated>
     </task>
-    <task id="LOCAL-00005" summary="Fikset POST/CREATE">
-      <option name="closed" value="true" />
-      <created>1701941879983</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1701941879983</updated>
-    </task>
-    <option name="localTasksCounter" value="6" />
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -160,7 +166,16 @@
     <MESSAGE value="Tilføjet mapper og test filer" />
     <MESSAGE value="#37 Tilføjet entiteter og relationer imellem dem" />
     <MESSAGE value="Ændret navn i @GetMapping(&quot;/api/damagereports/info&quot;) i DamageReportController" />
-    <MESSAGE value="Fikset POST/CREATE" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fikset POST/CREATE" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ændret navn i @GetMapping(&quot;/api/damagereports/info&quot;) i DamageReportController" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.IllegalArgumentException" package="java.lang" />
+          <option name="timeStamp" value="4" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
