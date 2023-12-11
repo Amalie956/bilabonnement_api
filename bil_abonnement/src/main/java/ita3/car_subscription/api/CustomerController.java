@@ -1,8 +1,6 @@
 package ita3.car_subscription.api;
 
-import ita3.car_subscription.entity.Car;
 import ita3.car_subscription.entity.Customer;
-import ita3.car_subscription.repository.ICarCustomer;
 import ita3.car_subscription.repository.ICustomerRepository;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

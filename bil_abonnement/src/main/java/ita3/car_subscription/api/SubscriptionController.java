@@ -1,7 +1,7 @@
 package ita3.car_subscription.api;
 
 import ita3.car_subscription.entity.Subscription;
-import ita3.car_subscription.repository.ICarCustomer;
+import ita3.car_subscription.repository.ICarRepository;
 import ita3.car_subscription.repository.ICustomerRepository;
 import ita3.car_subscription.repository.ISubscriptionRepository;
 import org.springframework.http.ResponseEntity;
@@ -16,9 +16,9 @@ public class SubscriptionController {
 
     private ISubscriptionRepository subscriptionRepository;
     private ICustomerRepository customerRepository;
-    private ICarCustomer carRepository;
+    private ICarRepository carRepository;
 
-    public SubscriptionController(ISubscriptionRepository subscriptionRepository, ICustomerRepository customerRepository, ICarCustomer carRepository){
+    public SubscriptionController(ISubscriptionRepository subscriptionRepository, ICustomerRepository customerRepository, ICarRepository carRepository){
         this.subscriptionRepository = subscriptionRepository;
         this.customerRepository = customerRepository;
         this.carRepository = carRepository;
