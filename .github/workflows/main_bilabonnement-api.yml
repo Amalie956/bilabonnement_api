@@ -30,6 +30,11 @@ jobs:
           name: node-app
           path: .
 
+      - name: Run Maven command with explicit POM path
+        run: mvn -f path/to/pom.xml <goals>
+        working-directory: path/to/working/directory
+
+          
   deploy:
     runs-on: ubuntu-latest
     needs: build
