@@ -54,15 +54,24 @@ public class DeveloperData implements ApplicationRunner {
 
         Customer customer1 = new Customer("Lars", "Andersen","290107851", 818231717);
         Customer customer2 = new Customer("Hanne", "Munk","240780771", 981737113);
+        Customer customer3 = new Customer("Thomas", "Jensen","3110944562", 71663616);
+        Customer customer4 = new Customer("Henrik", "Hansen","2711991771", 13616371);
+        Customer customer5 = new Customer("Mikkel", "Madsen","0707028712", 73717316);
+        Customer customer6 = new Customer("Per", "Larsen","12120121", 63616383);
         customerRepository.save(customer1);
         customerRepository.save(customer2);
+        customerRepository.save(customer3);
+        customerRepository.save(customer4);
+        customerRepository.save(customer5);
+        customerRepository.save(customer6);
+
 
         Subscription subscription1 = new Subscription(LocalDate.of(2022, 12, 25), LocalDate.of(2023, 3, 25),36.000,customer1,car1);
         Subscription subscription2 = new Subscription(LocalDate.of(2023, 4, 1), LocalDate.of(2023, 11, 6),18.000,customer2,car2);
         subscriptionRepository.save(subscription1);
         subscriptionRepository.save(subscription2);
 
-        DamageReport damageReport1 = new DamageReport("Dæk fladt", "Dæk", 1, 500);
+        DamageReport damageReport1 = new DamageReport("Dæk fladt", "Dæk", 1, 500, subscription1);
         damageReportRepository.save(damageReport1);
     }
 
