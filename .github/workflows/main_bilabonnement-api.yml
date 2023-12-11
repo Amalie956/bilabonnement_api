@@ -1,4 +1,4 @@
-name: Build and deploy Node.js app to Azure Web App 
+name: Build and deploy Node.js app to Azure Web App
 
 on:
   push:
@@ -14,9 +14,9 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Set up Node.js version
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v2
         with:
-          node-version: '18.x'
+          node-version: '16.x' # Opdateret til den seneste understøttede version
 
       - name: npm install, build, and test
         run: |
@@ -24,17 +24,17 @@ jobs:
           npm run build --if-present
           npm run test --if-present
 
+      # Maven-kommandoen - husk at erstatte med dine specifikke værdier
+      - name: Run Maven command with explicit POM path
+        run: mvn -f path/to/pom.xml <goals>
+        working-directory: path/to/working/directory
+
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
         with:
           name: node-app
           path: .
 
-      - name: Run Maven command with explicit POM path
-        run: mvn -f path/to/pom.xml <goals>
-        working-directory: path/to/working/directory
-
-          
   deploy:
     runs-on: ubuntu-latest
     needs: build
