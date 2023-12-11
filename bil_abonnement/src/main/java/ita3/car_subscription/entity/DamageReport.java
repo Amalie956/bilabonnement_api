@@ -15,14 +15,18 @@ public class DamageReport {
     @ManyToOne
     @JoinColumn(name = "subscription_id", referencedColumnName = "id") //fremmednøgle
     private Subscription subscription;
+
+    public long subscriptionID;
+
     public DamageReport() {
     }
 
-    public DamageReport(String error, String errorType, int numbersOfErrors, int pricePerError) {
+    public DamageReport(String error, String errorType, int numbersOfErrors, int pricePerError, Subscription subscription) {
         this.error = error;
         this.errorType = errorType;
         this.numbersOfErrors = numbersOfErrors;
         this.pricePerError = pricePerError;
+        this.subscription = subscription;
     }
 
     //Gettere og settere
@@ -64,5 +68,13 @@ public class DamageReport {
 
     public void setPricePerError(double pricePerError) {
         this.pricePerError = pricePerError;
+    }
+
+    public Subscription getSubscription() {
+        return subscription;
+    }
+
+    public void setSubscription(Subscription subscription) {
+        this.subscription = subscription;
     }
 }

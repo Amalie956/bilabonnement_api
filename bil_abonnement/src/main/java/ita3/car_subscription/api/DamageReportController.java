@@ -2,6 +2,7 @@ package ita3.car_subscription.api;
 
 import ita3.car_subscription.entity.DamageReport;
 import ita3.car_subscription.repository.IDamageReportRepository;
+import ita3.car_subscription.repository.ISubscriptionRepository;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,9 +13,12 @@ import java.util.Optional;
 @CrossOrigin("*")
 public class DamageReportController {
     private IDamageReportRepository damageReportRepository;
+    private ISubscriptionRepository subscriptionRepository;
 
-    public DamageReportController(IDamageReportRepository damageReportRepository) {
+    public DamageReportController(IDamageReportRepository damageReportRepository, ISubscriptionRepository subscriptionRepository) {
         this.damageReportRepository = damageReportRepository;
+        this.subscriptionRepository = subscriptionRepository;
+
     }
 
     @GetMapping("/api/damagereports/info")
@@ -48,6 +52,9 @@ public class DamageReportController {
     //Create a damage report
     @PostMapping("/api/damagereports")
     public DamageReport createDamageReport(@RequestBody DamageReport damageReport) {
+        var subscription = subscriptionRepository.findById(damageReport.subscriptionID).get();
+        //Her tilknyttes den den fundne bil og kunden til abonnementet ved at bruge "set"
+        damageReport.setSubscription(subscription);
         return damageReportRepository.save(damageReport);
     }
 
