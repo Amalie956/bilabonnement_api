@@ -3,14 +3,14 @@ Dette er et tværtfagligt projekt på uddannelsen [IT-Arkitektur](https://kea.dk
 
 Denne README.md fil indeholder
 - Introduktion
-- Funktioner
+- Mockup
+- Video
 - Medlemmer
 
  ## <img src="https://github.com/Amalie956/bilabonnement_api/assets/112120321/ff292f50-3701-4cd1-a7e2-649e322c3bdc" width="20"> Bilabonnement
 Bilabonnement A/S er en virksomhed af K.W Bruun koncernen, som importer biler. De har en hjemmeside med domænenavnet bilabonnement.dk, hvor de tilbyder abonnements- og leasingbiler.a
 
-- Denne webapplikation er baseret på en guide/præsentation af Bilabonnement. 
-- Applikationen er en videreudvikling af vores [mockup]([https://app.uizard.io/p/3a84d005](https://app.uizard.io/p/91a8c48f/preview))
+Applikationen er en videreudvikling af vores [mockup](https://app.uizard.io/p/91a8c48f)
 
 <details><summary>
 &larr; Klik for at se video
