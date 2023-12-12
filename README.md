@@ -1,5 +1,12 @@
 # Bilabonnement A/S projekt
-Dette er et tværtfagligt projekt på uddannelsen [IT-Arkitektur](https://kea.dk/uddannelser/professionsbachelor/it-arkitektur) på KEA på 3. Semester.
+Dette er et 3. semesters tværtfagligt projekt på uddannelsen [IT-Arkitektur](https://kea.dk/uddannelser/professionsbachelor/it-arkitektur).
+
+| Fag der indgår i projektet:                  |
+|-----------------------------|
+| Cloud Computing             |
+| Forretningsdesign og Analytics |
+| Systemudvikling             |
+| Softwarearkitektur          |
 
 Denne README.md fil indeholder
 - Introduktion
