@@ -86,12 +86,17 @@ public class SubscriptionController {
     //Delete a subscription
     @DeleteMapping("/api/subscriptions/{id}")
     public ResponseEntity<?> deleteSubscription(@PathVariable Long id) {
-        if (subscriptionRepository.existsById(id)) {
-            subscriptionRepository.deleteById(id);
-            return ResponseEntity.ok().build();
-        } else {
-            return ResponseEntity.notFound().build();
+        try {
+            if (subscriptionRepository.existsById(id)) {
+                subscriptionRepository.deleteById(id);
+                return ResponseEntity.ok().build();
+            } else {
+                return ResponseEntity.notFound().build();
+            }
+        } catch (Exception e) {
+            throw e;
         }
+
     }
 
 }
