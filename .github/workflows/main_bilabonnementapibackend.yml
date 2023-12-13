@@ -49,5 +49,5 @@ jobs:
         with:
           app-name: 'bilabonnementapibackend'
           slot-name: 'Production'
-          package: '*.jar'
+          package: ${{ github.workspace }}/target/*.jar
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_69B152742C45480EA3152188AC13217E }}
