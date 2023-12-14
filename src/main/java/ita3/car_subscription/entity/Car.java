@@ -10,17 +10,17 @@ public class Car {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    public String brand;
-    public String gearType;
-    public String fuelType;
-    public double perLiter;
-    public boolean carAvailable;
-    public int registrationNumber;
-    public double price;
+    private String brand;
+    private String gearType;
+    private String fuelType;
+    private double perLiter;
+    private boolean carAvailable;
+    private int registrationNumber;
+    private double price;
 
     //En bil kan have mange abonnementer
     @OneToMany(mappedBy = "car")
-    public List<Subscription> subscriptions;
+    private List<Subscription> subscriptions;
 
     public Car() {
     }

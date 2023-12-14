@@ -10,28 +10,28 @@ import java.util.List;
 public class Subscription {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    public long id;
+    private long id;
     @JsonFormat(pattern = "yyyy-MM-dd")
-    public LocalDate startDate;
+    private LocalDate startDate;
     @JsonFormat(pattern = "yyyy-MM-dd")
-    public LocalDate endDate;
-    public double plannedDistanceInKilometers;
+    private LocalDate endDate;
+    private double plannedDistanceInKilometers;
 
     //Flere abonnementer kan tilhøre en kunde
     @ManyToOne
     @JoinColumn(name = "customer_id", referencedColumnName = "id") //fremmednøgle
-    public Customer customer;
+    private Customer customer;
     public long customerID;
 
     //Flere abonnementer kan tilhøre en bil
     @ManyToOne
     @JoinColumn(name = "car_id", referencedColumnName = "id") //fremmednøgle
-    public Car car;
+    private Car car;
     public long carID;
 
     //En abonnement kan tilhøre flere skaderapporter
     @OneToMany(mappedBy = "subscription")
-    public List<DamageReport> damageReports;
+    private List<DamageReport> damageReports;
   
     public Subscription() {
     }

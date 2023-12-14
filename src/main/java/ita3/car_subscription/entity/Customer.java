@@ -8,15 +8,15 @@ import java.util.List;
 public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    public long id;
-    public String firstName;
-    public String lastName;
-    public String cpr;
-    public int accountNumber;
+    private long id;
+    private String firstName;
+    private String lastName;
+    private String cpr;
+    private int accountNumber;
 
     //En kunde kan have mange abonnementer
     @OneToMany(mappedBy = "customer")
-    public List<Subscription> subscriptions;
+    private List<Subscription> subscriptions;
   
     public Customer() {
     }
