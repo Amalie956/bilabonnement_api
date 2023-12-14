@@ -43,6 +43,7 @@ public class DeveloperData implements ApplicationRunner {
         Car car6 = new Car("Porche Tayan", "Automatgear","Diesel", 18.87,true,8263662,220000);
         Car car7 = new Car("Range Rover", "Automatgear","Benzin", 17.11,true,9826512,250000);
         Car car8 = new Car("Seat Cupra", "Manuel","Benzin", 16.87,false,1127252,175000);
+        Car car9 = new Car("Kia", "Manuel","Benzin", 13,true,1127252,175000);
         carRepository.save(car1);
         carRepository.save(car2);
         carRepository.save(car3);
@@ -51,6 +52,7 @@ public class DeveloperData implements ApplicationRunner {
         carRepository.save(car6);
         carRepository.save(car7);
         carRepository.save(car8);
+        carRepository.save(car9);
 
         Customer customer1 = new Customer("Lars", "Andersen","290107851", 818231717);
         Customer customer2 = new Customer("Hanne", "Munk","240780771", 981737113);
