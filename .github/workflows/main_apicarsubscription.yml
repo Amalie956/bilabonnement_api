@@ -21,8 +21,8 @@ jobs:
         with:
           java-version: '17'
 
-      - name: Build with Maven (without tests)
-        run: mvn -f apicarsubscription/pom.xml clean install -DskipTests
+      - name: Build with Maven 
+        run: mvn clean install
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
