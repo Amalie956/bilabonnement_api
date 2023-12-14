@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Optional;
 @RequestMapping
-
 @RestController
 @CrossOrigin("*")
 public class CustomerController {
@@ -18,13 +17,13 @@ public class CustomerController {
         this.customerRepository = customerRepository;
     }
 
-    //Read All
+    //Read All -> GET
     @GetMapping("/api/customers")
     public List<Customer> getAllCars() {
         return customerRepository.findAll();
     }
 
-    //Read one by id
+    //Read one by id -> GET
     @GetMapping("/api/customers/{id}")
     public ResponseEntity<Customer> getCarById(@PathVariable Long id) {
         Optional<Customer> customer = customerRepository.findById(id);
@@ -35,13 +34,13 @@ public class CustomerController {
         }
     }
 
-    //Create a customer
+    //Create a customer -> POST
     @PostMapping("/api/customers")
     public Customer createCustomer(@RequestBody Customer customer) {
         return customerRepository.save(customer);
     }
 
-    //Update a customer
+    //Update a customer -> PUT
     @PutMapping("/api/customers/{id}")
     public ResponseEntity<Customer> updatedSubscription(@PathVariable Long id, @RequestBody Customer customerDetails) {
         Optional<Customer> existingCustomer = customerRepository.findById(id);
@@ -58,7 +57,7 @@ public class CustomerController {
         }
     }
 
-    //Delete a customer
+    //Delete a customer -> DELETE
     @DeleteMapping("/api/customers/{id}")
     public ResponseEntity<?> deleteCar(@PathVariable Long id) {
         if (customerRepository.existsById(id)) {

@@ -17,18 +17,19 @@ public class Subscription {
     private LocalDate endDate;
     private double plannedDistanceInKilometers;
 
-    public long carID;
-
-    public long customerID;
-    @ManyToOne//(cascade = CascadeType.ALL)
+    //Flere abonnementer kan tilhøre en kunde
+    @ManyToOne
     @JoinColumn(name = "customer_id", referencedColumnName = "id") //fremmednøgle
     private Customer customer;
+    public long customerID;
 
-
-    @ManyToOne//(cascade = CascadeType.ALL)
+    //Flere abonnementer kan tilhøre en bil
+    @ManyToOne
     @JoinColumn(name = "car_id", referencedColumnName = "id") //fremmednøgle
     private Car car;
+    public long carID;
 
+    //En abonnement kan tilhøre flere skaderapporter
     @OneToMany(mappedBy = "subscription")
     private List<DamageReport> damageReports;
   
@@ -43,7 +44,7 @@ public class Subscription {
         this.car = car;
     }
 
-    //Gettere og settere
+    //Getters og setters
     public long getId() {
         return id;
     }
