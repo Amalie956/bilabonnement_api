@@ -12,8 +12,8 @@ import java.util.Optional;
 @RestController
 @CrossOrigin("*")
 public class DamageReportController {
-    private IDamageReportRepository damageReportRepository;
-    private ISubscriptionRepository subscriptionRepository;
+    public IDamageReportRepository damageReportRepository;
+    public ISubscriptionRepository subscriptionRepository;
 
     public DamageReportController(IDamageReportRepository damageReportRepository, ISubscriptionRepository subscriptionRepository) {
         this.damageReportRepository = damageReportRepository;

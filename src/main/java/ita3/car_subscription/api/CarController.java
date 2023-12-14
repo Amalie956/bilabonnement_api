@@ -11,7 +11,7 @@ import java.util.Optional;
 @RestController
 @CrossOrigin("*")
 public class CarController {
-    private ICarRepository carRepository;
+    public ICarRepository carRepository;
 
     public CarController(ICarRepository carRepository) {
         this.carRepository = carRepository;

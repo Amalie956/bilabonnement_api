@@ -11,7 +11,7 @@ import java.util.Optional;
 @RestController
 @CrossOrigin("*")
 public class CustomerController {
-    private ICustomerRepository customerRepository;
+    public ICustomerRepository customerRepository;
 
     public CustomerController(ICustomerRepository customerRepository) {
         this.customerRepository = customerRepository;

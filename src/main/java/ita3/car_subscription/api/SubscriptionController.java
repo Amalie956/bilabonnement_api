@@ -13,9 +13,9 @@ import java.util.Optional;
 @RestController
 @CrossOrigin("*")
 public class SubscriptionController {
-    private ISubscriptionRepository subscriptionRepository;
-    private ICustomerRepository customerRepository;
-    private ICarRepository carRepository;
+    public ISubscriptionRepository subscriptionRepository;
+    public ICustomerRepository customerRepository;
+    public ICarRepository carRepository;
 
     public SubscriptionController(ISubscriptionRepository subscriptionRepository, ICustomerRepository customerRepository, ICarRepository carRepository){
         this.subscriptionRepository = subscriptionRepository;
@@ -50,6 +50,7 @@ public class SubscriptionController {
             return ResponseEntity.notFound().build();
         }
     }
+
 
     //Create a subscription -> POST
     @PostMapping("/api/subscriptions")
