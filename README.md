@@ -31,6 +31,38 @@ Indsæt video er hjemmesiden
 Projektets rapport kan findes her [Bilabonnement Projekt](indsæt opgaven i pdf)
 
 
+
+    "Subscription API Endpoints:" +
+    GET /api/subscriptions: Liste af alle lejeaftaler" 
+    GET /api/subscriptions/{id}: Se en lejeaftale ud fra dens ID" 
+    POST /api/subscriptions: Lav en ny lejeaftale" 
+    PUT /api/subscriptions/{id}: Opdater en eksisterende lejeaftale" 
+    DELETE /api/subscriptions/{id}: Slet en lejeaftale";
+                               
+                
+                
+    "Damage Report API Endpoints:"
+    GET /api/damagereports: Liste af alle skaderapporter"
+    GET /api/damagereports/{id}: Se en skaderapport ud fra dens ID" 
+    POST /api/damagereports: Lav en ny skaderapport" 
+    PUT /api/damagereports/{id}: Opdater en eksisterende skaderapport" 
+    DELETE /api/damageReports/{id}: Slet en skaderapport";
+     
+    "Cars API Endpoints:"
+    GET /api/cars: Liste af alle biler"
+    GET /api/cars/{id}: Se en biler ud fra dens ID" 
+
+   
+    "Customer Report API Endpoints:"
+    GET /api/customers: Liste af alle kunder"
+    GET /api/customers/{id}: Se en kunde ud fra ID" 
+   
+
+                
+
+
+
+
 #### 👩‍👩‍👧‍👦Contributors
 I dette team er vi fire medlemmer fra Københavns Erhvervsakademi.
 
