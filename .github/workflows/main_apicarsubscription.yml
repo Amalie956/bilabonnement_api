@@ -28,7 +28,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: java-app
-          path: ${{ github.workspace }}/target
+          path: '${{ github.workspace }}/target/*.jar'
 
   deploy:
     runs-on: windows-latest
@@ -36,10 +36,6 @@ jobs:
     environment:
       name: 'Production'
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
-    env:
-      JDBC_DATABASE_URL: ${{ secrets.JDBC_DATABASE_URL }}
-      JDBC_USERNAME: ${{ secrets.JDBC_USERNAME }}
-      JDBC_PASSWORD: ${{ secrets.JDBC_PASSWORD }}
     
     steps:
       - name: Download artifact from build job
@@ -53,5 +49,5 @@ jobs:
         with:
           app-name: 'apicarsubscription'
           slot-name: 'Production'
-          package: ${{ github.workspace }}/apicarsubscription/target
+          package: '*.jar'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_1DC0F9381E9D46B2AA7E82AAE50E5009 }}
