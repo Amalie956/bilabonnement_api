@@ -17,11 +17,12 @@ public class Car {
     private boolean carAvailable;
     private int registrationNumber;
     private double price;
+
+    //En bil kan have mange abonnementer
     @OneToMany(mappedBy = "car")
     private List<Subscription> subscriptions;
 
     public Car() {
-
     }
   
     public Car(String brand, String gearType, String fuelType, double perLiter, boolean carAvailable, int registrationNumber, double price) {
@@ -34,7 +35,7 @@ public class Car {
         this.price = price;
     }
 
-    //Gettere og settere
+    //Getters og setters
     public long getId() {
         return id;
     }

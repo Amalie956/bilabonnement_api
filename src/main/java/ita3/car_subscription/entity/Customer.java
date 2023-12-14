@@ -13,6 +13,8 @@ public class Customer {
     private String lastName;
     private String cpr;
     private int accountNumber;
+
+    //En kunde kan have mange abonnementer
     @OneToMany(mappedBy = "customer")
     private List<Subscription> subscriptions;
   
@@ -26,7 +28,7 @@ public class Customer {
         this.accountNumber = accountNumber;
     }
 
-    //Gettere og settere
+    //Getters og setters
     public long getId() {
         return id;
     }

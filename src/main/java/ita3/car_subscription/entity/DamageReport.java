@@ -12,6 +12,7 @@ public class DamageReport {
     private int numbersOfErrors;
     private double pricePerError;
 
+    //Flere skaderapporter kan tilhøre en bil
     @ManyToOne
     @JoinColumn(name = "subscription_id", referencedColumnName = "id") //fremmednøgle
     private Subscription subscription;
@@ -29,7 +30,7 @@ public class DamageReport {
         this.subscription = subscription;
     }
 
-    //Gettere og settere
+    //Getters og setters
     public long getId() {
         return id;
     }
