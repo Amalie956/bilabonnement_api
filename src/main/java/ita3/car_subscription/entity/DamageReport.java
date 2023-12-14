@@ -6,16 +6,16 @@ import jakarta.persistence.*;
 public class DamageReport {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
-    private String error;
-    private String errorType;
-    private int numbersOfErrors;
-    private double pricePerError;
+    public long id;
+    public String error;
+    public String errorType;
+    public int numbersOfErrors;
+    public double pricePerError;
 
     //Flere skaderapporter kan tilhøre en bil
     @ManyToOne
     @JoinColumn(name = "subscription_id", referencedColumnName = "id") //fremmednøgle
-    private Subscription subscription;
+    public Subscription subscription;
 
     public long subscriptionID;
 
