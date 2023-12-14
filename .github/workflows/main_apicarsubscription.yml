@@ -53,5 +53,5 @@ jobs:
         with:
           app-name: 'apicarsubscription'
           slot-name: 'Production'
-          package: ${{ github.workspace }}/apicarsubscription/target/*.jar
+          package: ${{ github.workspace }}/apicarsubscription/target
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_1DC0F9381E9D46B2AA7E82AAE50E5009 }}
