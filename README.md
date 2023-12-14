@@ -10,16 +10,12 @@ Dette er et 3. semesters tværtfagligt projekt på uddannelsen [IT-Arkitektur](h
 
 Denne README.md fil indeholder
 - Introduktion
-- clone frontend respository
 - Mockup
 - Video
 - Medlemmer
 
  ## <img src="https://github.com/Amalie956/bilabonnement_api/assets/112120321/ff292f50-3701-4cd1-a7e2-649e322c3bdc" width="20"> Bilabonnement
 Bilabonnement A/S er en virksomhed af K.W Bruun koncernen, som importer biler. De har en hjemmeside med domænenavnet bilabonnement.dk, hvor de tilbyder abonnements- og leasingbiler.a
-
-For at til gå vores frontend appliaktion, når du cloner det, skal du: `npm install` og derefter
-`npm start`
 
 Så vil du komme til at køre hjemmesiden på: [http://localhost:3000](http://localhost:3000).
 
