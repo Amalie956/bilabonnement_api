@@ -36,6 +36,10 @@ jobs:
     environment:
       name: 'Production'
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
+    env:
+      JDBC_DATABASE_URL: ${{ secrets.JDBC_DATABASE_URL }}
+      JDBC_USERNAME: ${{ secrets.JDBC_USERNAME }}
+      JDBC_PASSWORD: ${{ secrets.JDBC_PASSWORD }}
     
     steps:
       - name: Download artifact from build job
