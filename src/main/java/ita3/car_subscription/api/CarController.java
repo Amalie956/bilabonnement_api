@@ -17,13 +17,13 @@ public class CarController {
         this.carRepository = carRepository;
     }
 
-    //Read All
+    //Read all -> GET
     @GetMapping("/api/cars")
     public List<Car> getAllCars() {
         return carRepository.findAll();
     }
 
-    //Read one by id
+    //Read one by id -> GET
     @GetMapping("/api/cars/{id}")
     public ResponseEntity<Car> getCarById(@PathVariable Long id) {
         Optional<Car> car = carRepository.findById(id);
@@ -34,13 +34,13 @@ public class CarController {
         }
     }
 
-    //Create a car
+    //Create a car -> POST
     @PostMapping("/api/cars")
     public Car createCar(@RequestBody Car car) {
         return carRepository.save(car);
     }
 
-    //Update a car
+    //Update a car -> PUT
     @PutMapping("/api/cars/{id}")
     public ResponseEntity<Car> updatedSubscription(@PathVariable Long id, @RequestBody Car carDetails) {
         Optional<Car> existingCar = carRepository.findById(id);
@@ -53,14 +53,13 @@ public class CarController {
             updatedCar.setCarAvailable(carDetails.isCarAvailable());
             updatedCar.setRegistrationNumber(carDetails.getRegistrationNumber());
             updatedCar.setPrice(carDetails.getPrice());
-
             return ResponseEntity.ok(carRepository.save(updatedCar));
         } else {
             return ResponseEntity.notFound().build();
         }
     }
 
-    //Delete a car
+    //Delete a car -> DELETE
     @DeleteMapping("/api/cars/{id}")
     public ResponseEntity<?> deleteCar(@PathVariable Long id) {
         if (carRepository.existsById(id)) {

@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy JAR app to Azure Web App - bilabonnementapibackend
+name: Build and deploy JAR app to Azure Web App - apicarsubscription
 
 on:
   push:
@@ -47,7 +47,7 @@ jobs:
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
         with:
-          app-name: 'bilabonnementapibackend'
+          app-name: 'apicarsubscription'
           slot-name: 'Production'
-          package: ${{ github.workspace }}/target/*.jar
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_69B152742C45480EA3152188AC13217E }}
+          package: '*.jar'
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_1DC0F9381E9D46B2AA7E82AAE50E5009 }}

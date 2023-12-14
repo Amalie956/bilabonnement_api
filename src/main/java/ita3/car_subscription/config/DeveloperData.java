@@ -21,10 +21,6 @@ public class DeveloperData implements ApplicationRunner {
     private ICustomerRepository customerRepository;
     private IDamageReportRepository damageReportRepository;
 
-    //private static final List<Subscription> SUBSCRIPTIONS = Arrays.asList(
-    //new Subscription());
-
-
     public DeveloperData(ISubscriptionRepository subscriptionRepository, ICarRepository carRepository, ICustomerRepository customerRepository, IDamageReportRepository damageReportRepository) {
         this.subscriptionRepository = subscriptionRepository;
         this.carRepository = carRepository;
@@ -33,8 +29,9 @@ public class DeveloperData implements ApplicationRunner {
     }
 
     @Override
-    //@Transactional
-    public void run(ApplicationArguments args) throws Exception {
+       public void run(ApplicationArguments args) throws Exception {
+        //Opretter objekter til databasen
+        //Bil objekter
         Car car1 = new Car("VW Golf VI", "Manuel","Benzin", 18.21,true,98172,150000);
         Car car2 = new Car("Seat Ibiza", "Manuel","Benzin", 21.87,false,01210161,135000);
         Car car3 = new Car("Tesla", "Automatgear","El", 32.91,true,8271922,349000);
@@ -54,6 +51,7 @@ public class DeveloperData implements ApplicationRunner {
         carRepository.save(car8);
         carRepository.save(car9);
 
+        //Kunde objekter
         Customer customer1 = new Customer("Lars", "Andersen","290107851", 818231717);
         Customer customer2 = new Customer("Hanne", "Munk","240780771", 981737113);
         Customer customer3 = new Customer("Thomas", "Jensen","3110944562", 71663616);
@@ -67,12 +65,13 @@ public class DeveloperData implements ApplicationRunner {
         customerRepository.save(customer5);
         customerRepository.save(customer6);
 
-
+        //Datoer for abonnement
         Subscription subscription1 = new Subscription(LocalDate.of(2022, 12, 25), LocalDate.of(2023, 3, 25),36.000,customer1,car1);
         Subscription subscription2 = new Subscription(LocalDate.of(2023, 4, 1), LocalDate.of(2023, 11, 6),18.000,customer2,car2);
         subscriptionRepository.save(subscription1);
         subscriptionRepository.save(subscription2);
 
+        //Skaderapport objekt
         DamageReport damageReport1 = new DamageReport("Dæk fladt", "Dæk", 1, 500, subscription1);
         damageReportRepository.save(damageReport1);
     }
