@@ -10,6 +10,7 @@ Dette er et 3. semesters tværtfagligt projekt på uddannelsen [IT-Arkitektur](h
 
 Denne README.md fil indeholder
 - Introduktion
+- clone frontend respository
 - Mockup
 - Video
 - Medlemmer
@@ -17,16 +18,30 @@ Denne README.md fil indeholder
  ## <img src="https://github.com/Amalie956/bilabonnement_api/assets/112120321/ff292f50-3701-4cd1-a7e2-649e322c3bdc" width="20"> Bilabonnement
 Bilabonnement A/S er en virksomhed af K.W Bruun koncernen, som importer biler. De har en hjemmeside med domænenavnet bilabonnement.dk, hvor de tilbyder abonnements- og leasingbiler.a
 
+For at til gå vores frontend appliaktion, når du cloner det, skal du: `npm install` og derefter
+`npm start`
+
+Så vil du komme til at køre hjemmesiden på: [http://localhost:3000](http://localhost:3000).
+
 Applikationen er en videreudvikling af vores [mockup](https://app.uizard.io/p/91a8c48f) og [wireframe](https://app.uizard.io/p/0e81eeb2)
 
 <details><summary>
 &larr; Klik for at se video
 </summary>
   
-Indsæt video er hjemmesiden
 
-  
+
+https://github.com/Amalie956/bilabonnement_api/assets/112120321/949a724e-5845-409c-be93-24cc0c137216
+
+
+
 </details>
+
+<details>
+  <summary>&larr; Er du forretningsudvikler? Så klik her for at se dashboard!</summary>
+  <img src="https://github.com/Amalie956/bilabonnement_api/assets/112120321/28273ea3-831a-400c-9e98-2377d2121bf1" alt="billede" width="700" height="500">
+</details>
+
 
 Projektets rapport kan findes her [Bilabonnement Projekt](indsæt opgaven i pdf)
 
