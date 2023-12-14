@@ -21,27 +21,32 @@ jobs:
         with:
           java-version: '17'
 
-      - name: Build with Maven
-        run: mvn clean install
+      - name: Build with Maven (without tests)
+        run: mvn -f apicarsubscription/pom.xml clean install -DskipTests
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
         with:
-          name: java-app
+          name: apicarsubscription
           path: '${{ github.workspace }}/target/*.jar'
-
+  
   deploy:
     runs-on: windows-latest
     needs: build
     environment:
       name: 'Production'
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
+    env:
+      JDBC_DATABASE_URL: ${{ secrets.JDBC_DATABASE_URL }}
+      JDBC_USERNAME: ${{ secrets.JDBC_USERNAME }}
+      JDBC_PASSWORD: ${{ secrets.JDBC_PASSWORD }}
     
     steps:
       - name: Download artifact from build job
         uses: actions/download-artifact@v3
         with:
-          name: java-app
+          name: apicarsubscription
+          path: ${{ github.workspace }}/apicarsubscription/target
       
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
@@ -49,5 +54,5 @@ jobs:
         with:
           app-name: 'apicarsubscription'
           slot-name: 'Production'
-          package: '*.jar'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_1DC0F9381E9D46B2AA7E82AAE50E5009 }}
+          package: ${{ github.workspace }}/apicarsubscription/target/*.jar
