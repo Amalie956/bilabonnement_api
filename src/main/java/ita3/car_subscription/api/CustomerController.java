@@ -34,38 +34,4 @@ public class CustomerController {
         }
     }
 
-    //Create a customer -> POST
-    @PostMapping("/api/customers")
-    public Customer createCustomer(@RequestBody Customer customer) {
-        return customerRepository.save(customer);
-    }
-
-    //Update a customer -> PUT
-    @PutMapping("/api/customers/{id}")
-    public ResponseEntity<Customer> updatedSubscription(@PathVariable Long id, @RequestBody Customer customerDetails) {
-        Optional<Customer> existingCustomer = customerRepository.findById(id);
-        if (existingCustomer.isPresent()) {
-           Customer updatedCustomer = existingCustomer.get();
-            updatedCustomer.setFirstName(customerDetails.getFirstName());
-            updatedCustomer.setLastName(customerDetails.getLastName());
-            updatedCustomer.setCpr(customerDetails.getCpr());
-            updatedCustomer.setAccountNumber(customerDetails.getAccountNumber());
-
-            return ResponseEntity.ok(customerRepository.save(updatedCustomer));
-        } else {
-            return ResponseEntity.notFound().build();
-        }
-    }
-
-    //Delete a customer -> DELETE
-    @DeleteMapping("/api/customers/{id}")
-    public ResponseEntity<?> deleteCar(@PathVariable Long id) {
-        if (customerRepository.existsById(id)) {
-            customerRepository.deleteById(id);
-            return ResponseEntity.ok().build();
-        } else {
-            return ResponseEntity.notFound().build();
-        }
-    }
-
 }

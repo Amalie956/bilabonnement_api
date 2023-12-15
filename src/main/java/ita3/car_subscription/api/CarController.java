@@ -34,40 +34,4 @@ public class CarController {
         }
     }
 
-    //Create a car -> POST
-    @PostMapping("/api/cars")
-    public Car createCar(@RequestBody Car car) {
-        return carRepository.save(car);
-    }
-
-    //Update a car -> PUT
-    @PutMapping("/api/cars/{id}")
-    public ResponseEntity<Car> updatedSubscription(@PathVariable Long id, @RequestBody Car carDetails) {
-        Optional<Car> existingCar = carRepository.findById(id);
-        if (existingCar.isPresent()) {
-            Car updatedCar = existingCar.get();
-            updatedCar.setBrand(carDetails.getBrand());
-            updatedCar.setGearType(carDetails.getGearType());
-            updatedCar.setFuelType(carDetails.getFuelType());
-            updatedCar.setPerLiter(carDetails.getPerLiter());
-            updatedCar.setCarAvailable(carDetails.isCarAvailable());
-            updatedCar.setRegistrationNumber(carDetails.getRegistrationNumber());
-            updatedCar.setPrice(carDetails.getPrice());
-            return ResponseEntity.ok(carRepository.save(updatedCar));
-        } else {
-            return ResponseEntity.notFound().build();
-        }
-    }
-
-    //Delete a car -> DELETE
-    @DeleteMapping("/api/cars/{id}")
-    public ResponseEntity<?> deleteCar(@PathVariable Long id) {
-        if (carRepository.existsById(id)) {
-            carRepository.deleteById(id);
-            return ResponseEntity.ok().build();
-        } else {
-            return ResponseEntity.notFound().build();
-        }
-    }
-
 }
