@@ -39,8 +39,7 @@ https://github.com/Amalie956/bilabonnement_api/assets/112120321/949a724e-5845-40
 </details>
 
 
-Projektets rapport kan findes her [Bilabonnement Projekt](indsæt opgaven i pdf)
-
+Projektets rapport kan findes her [Bilabonnement projekt](https://github.com/Amalie956/bilabonnement_api/files/13683723/Eksamensprojekt.pdf)
 
 
     "Subscription API Endpoints:" +
