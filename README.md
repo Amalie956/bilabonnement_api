@@ -73,7 +73,8 @@ https://github.com/Amalie956/bilabonnement_api/assets/112120321/949a724e-5845-40
 #### 👩‍👩‍👧‍👦Contributors
 I dette team er vi fire medlemmer fra Københavns Erhvervsakademi.
 
-Projektets rapport kan findes her [Bilabonnement projekt](https://github.com/Amalie956/bilabonnement_api/files/13683723/Eksamensprojekt.pdf)
+Projektets rapport kan findes her [Bilabonnement projekt](https://github.com/Amalie956/bilabonnement_api/files/13683806/Eksamensprojekt.pdf)
+
 
 Hvis du vil i kontakt med andre i vores team kan du lave et mention ved at bruge `@` plus brugernavnet. Dette vil udløse en notifikation, så kan vedkommende hjælpe dig. Nedenunder kan ses vores brugernavne:
 - [Abdul](https://github.com/Abdu1RH) &rarr; `@Abdu1RH` , IT-Arkitektur studerende
